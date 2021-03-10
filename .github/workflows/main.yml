@@ -13,12 +13,12 @@ jobs:
     steps: 
     - uses: actions/checkout@v2
     - name: SSH Deploy to WP Engine
-      uses: bowiedev/github-action-wpengine-ssh-deploy@master 
+      uses: wpengine/github-action-wpe-site-deploy@master 
       env: 
           WPE_ENV_NAME: selive
           WPE_SSHG_KEY_PUBLIC: ${{ secrets.WPENGINE_SSH_KEY_PUBLIC }}
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}
-          TPO_SRC_PATH: "wp-content/themes/authority-pro/"
-          TPO_PATH: "wp-content/themes/authority-pro/"
+          TPO_SRC_PATH: ""
+          TPO_PATH: ""
 
 
