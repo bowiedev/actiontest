@@ -1,7 +1,6 @@
 Authority Pro
 https://my.studiopress.com/themes/authority/
 
-hithere THIS IS A TEST IN THE THEME DIR
 INSTALL
 1. Upload the Authority Pro theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
 2. Go to your WordPress dashboard and select Appearance.
