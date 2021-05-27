@@ -1,2 +1,2 @@
 <?php
-// Silence is golden, or is it?
+// the Silence is golden, or is it?
