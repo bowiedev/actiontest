@@ -1,5 +1,4 @@
 name: Deploy to WP Engine
-  
 on:
   push:
     branches:
@@ -7,18 +6,34 @@ on:
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
-        
+    runs-on: ubuntu-latest  
     steps: 
     - uses: actions/checkout@v2
     - name: GitHub Action Deploy to WP Engine
-      uses: wpengine/github-action-wpe-site-deploy@feature/speed 
+      uses: wpengine/github-action-wpe-site-deploy@feature/stage
       env: 
           WPE_ENV_NAME: selive
           WPE_SSHG_KEY_PUBLIC: ${{ secrets.WPENGINE_SSH_KEY_PUBLIC }}
           WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}
           TPO_SRC_PATH: ""
           TPO_PATH: ""
+
+    branches:
+      - stage
+jobs:
+  build:
+    runs-on: ubuntu-latest  
+    steps: 
+    - uses: actions/checkout@v2
+    - name: GitHub Action Deploy to WP Engine
+      uses: wpengine/github-action-wpe-site-deploy@feature/stage
+      env: 
+          WPE_ENV_NAME: selive
+          WPE_SSHG_KEY_PUBLIC: ${{ secrets.WPENGINE_SSH_KEY_PUBLIC }}
+          WPE_SSHG_KEY_PRIVATE: ${{ secrets.WPENGINE_SSH_KEY_PRIVATE }}
+          TPO_SRC_PATH: ""
+          TPO_PATH: ""
+
+          
 
 
